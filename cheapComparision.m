@@ -57,3 +57,6 @@ for i = 1:4
     ylabel("Intensity")
 end
 
+%% Teoaeagoisen
+%% Liberals suck
+
