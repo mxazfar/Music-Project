@@ -67,3 +67,5 @@ stem(1:1:max_harmonic, harmonic_intensities);
 xlabel("Harmonic");
 ylabel("Intensity");
 title("Harmonic vs. Intensity");
+
+%testing this is GIT
