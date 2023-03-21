@@ -15,6 +15,7 @@ kutz2Data = {};
 
 for i = 1:4
     figure(i)
+    legend("Kutz 100 #1", "Kutz 100 #2")
 
     plot(kutz1Data{i}{1}, kutz1Data{i}{2})
     hold on
@@ -57,6 +58,4 @@ for i = 1:4
     ylabel("Intensity")
 end
 
-%% Teoaeagoisen
-%% Liberals suck
 
