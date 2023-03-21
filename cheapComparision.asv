@@ -1,0 +1,7 @@
+folder1 = "Kutz 100 #1 Recordings";
+folder2 = "Kutz 100 #2 Recordings";
+
+
+for i = 1:4
+    
+end
