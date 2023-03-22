@@ -13,6 +13,18 @@ kutz2Data = {};
 [kutz2Data{3}{1}, kutz2Data{3}{2}, kutz2Data{3}{3}] = data_processing_function(folder2 + "/Open A.wav", "A");
 [kutz2Data{4}{1}, kutz2Data{4}{2}, kutz2Data{4}{3}] = data_processing_function(folder2 + "/Open E.wav", "E");
 
+kutz1HarmonicData = {};
+[kutz1HarmonicData{1}{1}, kutz1HarmonicData{1}{2}, kutz1HarmonicData{1}{3}] = data_processing_function(folder1 + "/Harmonic G.wav", "G");
+[kutz1HarmonicData{2}{1}, kutz1HarmonicData{2}{2}, kutz1HarmonicData{2}{3}] = data_processing_function(folder1 + "/Harmonic D.wav", "D");
+[kutz1HarmonicData{3}{1}, kutz1HarmonicData{3}{2}, kutz1HarmonicData{3}{3}] = data_processing_function(folder1 + "/Harmonic A.wav", "A");
+[kutz1HarmonicData{4}{1}, kutz1HarmonicData{4}{2}, kutz1HarmonicData{4}{3}] = data_processing_function(folder1 + "/Harmonic E.wav", "E");
+
+kutz2HarmonicData = {};
+[kutz2HarmonicData{1}{1}, kutz2HarmonicData{1}{2}, kutz2HarmonicData{1}{3}] = data_processing_function(folder2 + "/Harmonic G.wav", "G");
+[kutz2HarmonicData{2}{1}, kutz2HarmonicData{2}{2}, kutz2HarmonicData{2}{3}] = data_processing_function(folder2 + "/Harmonic D.wav", "D");
+[kutz2HarmonicData{3}{1}, kutz2HarmonicData{3}{2}, kutz2HarmonicData{3}{3}] = data_processing_function(folder2 + "/Harmonic A.wav", "A");
+[kutz2HarmonicData{4}{1}, kutz2HarmonicData{4}{2}, kutz2HarmonicData{4}{3}] = data_processing_function(folder2 + "/Harmonic E.wav", "E");
+
 for i = 1:4
     figure(i)
     legend("Kutz 100 #1", "Kutz 100 #2")
@@ -45,13 +57,13 @@ for i = 1:4
 
     switch(i)
         case 1
-            title("Open G Harmonics")
+            title("Open G Harmonic Intensities")
         case 2
-            title("Open D Harmonics")
+            title("Open D Harmonic Intensities")
         case 3
-            title("Open A Harmonics")
+            title("Open A Harmonic Intensities")
         case 4
-            title("Open E Harmonics")
+            title("Open E Harmonic Intensities")
     end
 
     xlabel("Harmonic")
