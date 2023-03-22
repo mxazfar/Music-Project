@@ -25,52 +25,62 @@ chengHarmonicData = {};
 [chengHarmonicData{2}{1}, chengHarmonicData{2}{2}, chengHarmonicData{2}{3}] = data_processing_function(folder2 + "/Harmonic D.wav", "D");
 [chengHarmonicData{3}{1}, chengHarmonicData{3}{2}, chengHarmonicData{3}{3}] = data_processing_function(folder2 + "/Harmonic A.wav", "A");
 
+subplot = true;
 
-for i = 1:4
-    figure(i)
-    legend("Kono", "John Cheng")
-
-    plot(myViolinData{i}{1}, myViolinData{i}{2})
+if(subplot ==  false)
+    for i = 1:4
+        figure(i)
+        legend("Kono", "John Cheng")
     
-    if(i ~= 4) 
-        hold on
-        plot(chengData{i}{1}, chengData{i}{2})
-    end
-
-    switch(i)
-        case 1
-            title("Open G Spectrum")
-        case 2
-            title("Open D Spectrum")
-        case 3
-            title("Open A Spectrum")
-        case 4
-            title("Open E Spectrum")
-    end
-
-    xlabel("Frequency (Hz)")
-    ylabel("Intensity")
+        plot(myViolinData{i}{1}, myViolinData{i}{2})
+        
+        if(i ~= 4) 
+            hold on
+            plot(chengData{i}{1}, chengData{i}{2})
+        end
     
-    figure(i+4)
-
-    stem(myViolinData{i}{3})
+        switch(i)
+            case 1
+                title("Open G Spectrum")
+            case 2
+                title("Open D Spectrum")
+            case 3
+                title("Open A Spectrum")
+            case 4
+                title("Open E Spectrum")
+        end
     
-    if(i ~= 4)
-        hold on
-        stem(chengData{i}{3})
+        xlabel("Frequency (Hz)")
+        ylabel("Intensity")
+        
+        figure(i+4)
+    
+        stem(myViolinData{i}{3})
+        
+        if(i ~= 4)
+            hold on
+            stem(chengData{i}{3})
+        end
+    
+        switch(i)
+            case 1
+                title("Open G Harmonic Intensities")
+            case 2
+                title("Open D Harmonic Intensities")
+            case 3
+                title("Open A Harmonic Intensities")
+            case 4
+                title("Open E Harmonic Intensities")
+        end
+    
+        xlabel("Harmonic")
+        ylabel("Intensity")
     end
+end
 
-    switch(i)
-        case 1
-            title("Open G Harmonic Intensities")
-        case 2
-            title("Open D Harmonic Intensities")
-        case 3
-            title("Open A Harmonic Intensities")
-        case 4
-            title("Open E Harmonic Intensities")
+if(subplot == true) 
+    for i = 1:4
+        subplot(1,2,1)
+        
     end
-
-    xlabel("Harmonic")
-    ylabel("Intensity")
 end
